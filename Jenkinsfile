@@ -2,7 +2,8 @@ node {
     echo "SUCCESS ON master"
     try {
         // do something that fails
-        sh "exit 1"
+        sh "echo YEP"
+        sh "exit 100"
         currentBuild.result = 'SUCCESS'
     } catch (Exception err) {
         currentBuild.result = 'FAILURE'
